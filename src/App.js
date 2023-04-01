@@ -1,17 +1,22 @@
-import React,{useState,useNavigate} from "react";
+import React,{useState} from "react";
 import "./style.css";
-import {Router,Route,Link} from 'react-router-dom'
+import {Router,Route,Link,useNavigate} from 'react-router-dom'
 
 let name = ""
 
-function storename()
-{
- name = document.getElementById('nameinpbox').value;
- console.log(name)
-}
 
 export default function App() {
   let [Timer,setTimer] = useState(false)
+  let navigate=useNavigate();
+
+
+  function storename()
+{
+ name = document.getElementById('nameinpbox').value;
+ navigate('/TestInterface')
+ console.log(name)
+}
+
 
   // setTimeout(()=>{
   //   setTimer(true)
