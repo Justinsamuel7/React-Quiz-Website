@@ -49,4 +49,3 @@ export default function App() {
   );
 }
 
-export default name;
