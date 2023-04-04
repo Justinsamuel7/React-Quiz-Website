@@ -1,4 +1,4 @@
-import React,{useState,useNavigate} from "react";
+import React,{useState} from "react";
 import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Q1 from "./Q1";
@@ -10,10 +10,9 @@ import Q2 from "./Q2";
 export default function TestInterface() {
 
   const navigate = useNavigate();
-   
   function nextquestion()
   {
-    navigate('Q'+1)
+    navigate("Q"+2)
 
   }
 
@@ -62,8 +61,8 @@ export default function TestInterface() {
             <Route path="/Q2" element={<Q2/>}/>
           </Routes>
 
-          <button onClick={}>Prev</button>
-          <button onClick={}>Next</button>
+          <button onClick={prevquestion}>Prev</button>
+          <button onClick={nextquestion}>Next</button>
 
         </div>
 
