@@ -1,12 +1,28 @@
 import React,{useState,useNavigate} from "react";
 import "./style.css";
-import {Routes,Route,Link,useNavigate} from 'react-router-dom'
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Q1 from "./Q1";
 import Q2 from "./Q2";
 
 
 
+
 export default function TestInterface() {
+
+  const navigate = useNavigate();
+   
+  function nextquestion()
+  {
+    navigate('Q'+1)
+
+  }
+
+  function prevquestion()
+  {
+    
+  }
+
+
   return(
     <React.Fragment>
       <div id="Qpartandmap">
