@@ -3,12 +3,14 @@ import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
 
+let Marks=0;
 
 
 export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
   let [Timer,setTimer] = useState(false)
+  
 
 
   // setTimeout(()=>{
@@ -42,25 +44,25 @@ export default function TestInterface() {
 
           <div id="buttonsContainer">
             <button onClick={()=>goto(0)}>1</button>
-            <button disabled="true" onClick={()=>goto(1)}>2</button>
-            <button disabled="true" onClick={()=>goto(2)}>3</button>
-            <button disabled="true" onClick={()=>goto(3)}>4</button>
-            <button disabled="true" onClick={()=>goto(4)}>5</button>
-            <button disabled="true" onClick={()=>goto(5)}>6</button>
-            <button disabled="true" onClick={()=>goto(6)}>7</button>
-            <button disabled="true" onClick={()=>goto(7)}>8</button>
-            <button disabled="true" onClick={()=>goto(8)}>9</button>
-            <button disabled="true" onClick={()=>goto(9)}>10</button>
-            <button disabled="true" onClick={()=>goto(10)}>11</button>
-            <button disabled="true" onClick={()=>goto(11)}>12</button>
-            <button disabled="true" onClick={()=>goto(12)}>13</button>
-            <button disabled="true" onClick={()=>goto(13)}>14</button>
-            <button disabled="true" onClick={()=>goto(14)}>15</button>
-            <button disabled="true" onClick={()=>goto(15)}>16</button>
-            <button disabled="true" onClick={()=>goto(16)}>17</button>
-            <button disabled="true" onClick={()=>goto(17)}>18</button>
-            <button disabled="true" onClick={()=>goto(18)}>19</button>
-            <button disabled="true" onClick={()=>goto(19)}>20</button>
+            <button disabled="true" onClick={()=>goto(1)} class="BtnsMap" > 2 </button>
+            <button disabled="true" onClick={()=>goto(2)} class="BtnsMap" > 3 </button>
+            <button disabled="true" onClick={()=>goto(3)} class="BtnsMap" > 4 </button>
+            <button disabled="true" onClick={()=>goto(4)} class="BtnsMap" > 5 </button>
+            <button disabled="true" onClick={()=>goto(5)} class="BtnsMap" > 6 </button>
+            <button disabled="true" onClick={()=>goto(6)} class="BtnsMap" > 7 </button>
+            <button disabled="true" onClick={()=>goto(7)} class="BtnsMap" > 8 </button>
+            <button disabled="true" onClick={()=>goto(8)} class="BtnsMap" > 9 </button>
+            <button disabled="true" onClick={()=>goto(9)} class="BtnsMap"> 10 </button>
+            <button disabled="true" onClick={()=>goto(10)} class="BtnsMap"> 11 </button>
+            <button disabled="true" onClick={()=>goto(11)} class="BtnsMap"> 12 </button>
+            <button disabled="true" onClick={()=>goto(12)} class="BtnsMap"> 13 </button>
+            <button disabled="true" onClick={()=>goto(13)} class="BtnsMap"> 14 </button>
+            <button disabled="true" onClick={()=>goto(14)} class="BtnsMap"> 15 </button>
+            <button disabled="true" onClick={()=>goto(15)} class="BtnsMap"> 16 </button>
+            <button disabled="true" onClick={()=>goto(16)} class="BtnsMap"> 17 </button>
+            <button disabled="true" onClick={()=>goto(17)} class="BtnsMap"> 18 </button>
+            <button disabled="true" onClick={()=>goto(18)} class="BtnsMap"> 19 </button>
+            <button disabled="true" onClick={()=>goto(19)} class="BtnsMap"> 20 </button>
 
           </div>
 
