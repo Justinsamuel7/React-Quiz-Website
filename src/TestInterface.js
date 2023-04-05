@@ -57,8 +57,10 @@ export default function TestInterface() {
         </div>
 
         <div id="Qpart">
+          <div>
 
-          <p>{QuestionsArr[qno].question}</p>
+          <p>{qno+1}. {QuestionsArr[qno].question}</p>
+          <div class="optionscontainer">
           {QuestionsArr[qno].options.map((ele,index)=>{
             return(
               <li key={index}>
@@ -67,13 +69,16 @@ export default function TestInterface() {
             )
 
           })}
+          </div>
 
-          {qno>0 ? (<button onClick={prevquestion}>Prev</button>):''}
-          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button>Submit</button>)}
+          <div id="buttonscontainer">
+          {qno>0 ? (<button onClick={prevquestion}>Prev</button>):(<button disabled="true">Prev</button>)}
+          {qno==QuestionsArr.length-1 ? (<button>Submit</button>):''}
+          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button disabled="true">next</button>)}
+          </div>
 
 
-
-
+          </div>
         </div>
 
 
