@@ -17,29 +17,6 @@ export default function App() {
  console.log(name)
 }
 
-
-  // setTimeout(()=>{
-  //   setTimer(true)
-  // },5000)
-
-  // function Questions()
-  // {
-  //   return(
-  //     <>
-  //     <h1>question1</h1>
-  //     </>
-  //   )
-  // }
-
-  // function Result()
-  // {
-  //   return(
-  //     <>
-  //    <h1>result</h1>
-  //     </>
-  //   )
-  // }
-
   return (
     <div>
       <h1>Welcome to Test</h1>

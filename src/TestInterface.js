@@ -9,6 +9,29 @@ export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
 
+  setTimeout(()=>{
+    setTimer(true)
+  },5000)
+
+  function Questions()
+  {
+    return(
+      <>
+      <h1>question1</h1>
+      </>
+    )
+  }
+
+  function Result()
+  {
+    return(
+      <>
+     <h1>result</h1>
+      </>
+    )
+  }
+
+
   function nextquestion()
   {
     setqno(qno+1)
@@ -63,10 +86,11 @@ export default function TestInterface() {
           <div class="optionscontainer">
           {QuestionsArr[qno].options.map((ele,index)=>{
             return(
-              <li key={index}>
-                {ele}
-              </li>
-            )
+              <div key={index}>
+              <input type="radio"  name="fav_language" value={ele}/>
+              <label>{ele}</label>
+              </div>
+              )
 
           })}
           </div>
