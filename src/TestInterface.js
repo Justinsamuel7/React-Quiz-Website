@@ -15,7 +15,7 @@ export default function TestInterface() {
 
 
   // setTimeout(()=>{
-  //   setTimer(true)
+  //   setTimerANDTestON(true)
   // },5000)
 
   function nextquestion(qnoforbtn)
