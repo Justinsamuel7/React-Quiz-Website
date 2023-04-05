@@ -10,7 +10,6 @@ export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
   let [Timer,setTimer] = useState(false)
-  let []
 
 
   // setTimeout(()=>{
