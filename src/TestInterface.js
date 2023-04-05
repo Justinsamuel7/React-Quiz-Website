@@ -1,26 +1,13 @@
 import React,{useState} from "react";
 import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Q1 from "./Q1";
-import Q2 from "./Q2";
-
+import QuestionsArr from './Questions'
 
 
 
 export default function TestInterface() {
 
   const navigate = useNavigate();
-  function nextquestion()
-  {
-    navigate("Q"+2)
-
-  }
-
-  function prevquestion()
-  {
-    
-  }
-
 
   return(
     <React.Fragment>
@@ -56,13 +43,10 @@ export default function TestInterface() {
         </div>
 
         <div id="Qpart">
-          <Routes >
-            <Route path="/" element={<Q1/>}/>
-            <Route path="/Q2" element={<Q2/>}/>
-          </Routes>
+          
 
-          <button onClick={prevquestion}>Prev</button>
-          <button onClick={nextquestion}>Next</button>
+          <button >Prev</button>
+          <button >Next</button>
 
         </div>
 
