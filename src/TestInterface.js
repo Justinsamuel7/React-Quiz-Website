@@ -8,8 +8,10 @@ let Marks=0;
 
 export default function TestInterface() {
 
-  let [qno,setqno]=useState(0)
-  let [Timer,setTimer] = useState(false)
+  let [qno,setqno]=useState(0) // To manage the question
+  let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
+
+  // let [Qmap,setQmap] = useState(true)
 
 
   // setTimeout(()=>{
@@ -20,6 +22,8 @@ export default function TestInterface() {
   { 
     let BtnsMap =  document.querySelectorAll('.BtnsMap')
     BtnsMap[qnoforbtn].disabled=false
+    
+    // setQmap([...BtnsMap,BtnsMap[qnoforbtn].disabled=false])
     setqno(qno+1)
   }
 
@@ -29,6 +33,7 @@ export default function TestInterface() {
     setqno(qno-1)
   }
 
+  // travel through the active questions
   function goto(num)
   {  
     setqno(num)
@@ -36,12 +41,9 @@ export default function TestInterface() {
 
 
 
+  // to Display the question
   function Questions()
   {
-
-
-  
-
     return(
   <React.Fragment>
       <div id="Qpartandmap">
@@ -70,8 +72,9 @@ export default function TestInterface() {
             <button disabled="true" onClick={()=>goto(17)} class="BtnsMap"> 18 </button>
             <button disabled="true" onClick={()=>goto(18)} class="BtnsMap"> 19 </button>
             <button disabled="true" onClick={()=>goto(19)} class="BtnsMap"> 20 </button>
-
           </div>
+          <button onClick={SubmitTest} id="leftsideSubmit"> Submit </button>
+
 
         </div>
 
@@ -93,7 +96,7 @@ export default function TestInterface() {
 
           <div id="buttonscontainer">
           {qno>0 ? (<button onClick={prevquestion}>Prev</button>):(<button disabled="true" onClick={()=>goto(1)}>Prev</button>)}
-          {qno==QuestionsArr.length-1 ? (<button>Submit</button>):''}
+          {qno==QuestionsArr.length-1 ? (<button onClick={SubmitTest}>Submit</button>):''}
           {qno<QuestionsArr.length-1 ? (<button onClick={()=>nextquestion(qno)}>Next</button>):(<button disabled="true" onClick={()=>goto(1)}>next</button>)}
           </div>
 
@@ -101,21 +104,23 @@ export default function TestInterface() {
           </div>
         </div>
 
-
-
       </div>
-      
 
-
-
-    </React.Fragment>    )
+    </React.Fragment>)
   }
 
+
+  function SubmitTest()
+  {
+    setTimerANDTestON(true);
+  }
+  // To display the result at submit button or after time runs out
   function Result()
   {
     return(
       <>
-     <h1>result</h1>
+     <h1>result Page </h1>
+     <h3>Your Marks _/20</h3>
       </>
     )
   }
@@ -124,7 +129,7 @@ export default function TestInterface() {
 
   return(
     <div>
-      {Timer?Result():Questions()}
+      {TimerANDTestON?Result():Questions()} 
     </div>
   )
 

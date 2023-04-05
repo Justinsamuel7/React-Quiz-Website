@@ -27,6 +27,14 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.8);
   margin:1rem;
   text-align: center;
+  width: 2rem;
+  height: 2rem;
+  background-color:rgb(189, 255, 233);
+  border-radius: 5px;
+  font-size:medium;
+  font-weight: bolder;
+  border: 1px solid rgb(79, 211, 167);
+  box-shadow: 0px 0px 3px rgb(17, 125, 89);
 }
 #Qpart
 {
@@ -40,7 +48,7 @@ p {
   margin: 1rem;
   font-size: xx-large;
 }
-#Qpart button
+#Qpart button, #leftsideSubmit
 {
   margin: 2rem;
   background-color: rgb(46, 168, 255);
