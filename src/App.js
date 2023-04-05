@@ -6,7 +6,6 @@ let name = ""
 
 
 export default function App() {
-  let [Timer,setTimer] = useState(false)
   let navigate=useNavigate();
 
 
