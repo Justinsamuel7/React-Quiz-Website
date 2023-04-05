@@ -10,17 +10,20 @@ export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
   let [Timer,setTimer] = useState(false)
-  
 
 
   // setTimeout(()=>{
   //   setTimer(true)
   // },5000)
 
-  function nextquestion()
-  {
+  function nextquestion(qnoforbtn)
+  { 
+    let BtnsMap =  document.querySelectorAll('.BtnsMap')
+    BtnsMap[qnoforbtn].disabled=false
     setqno(qno+1)
   }
+
+
   function prevquestion()
   {
     setqno(qno-1)
@@ -28,13 +31,17 @@ export default function TestInterface() {
 
   function goto(Qno)
   {
-    setqno(1)
+    setqno(Qno)
   }
 
 
 
   function Questions()
   {
+
+
+  
+
     return(
   <React.Fragment>
       <div id="Qpartandmap">
@@ -87,7 +94,7 @@ export default function TestInterface() {
           <div id="buttonscontainer">
           {qno>0 ? (<button onClick={prevquestion}>Prev</button>):(<button disabled="true" onClick={()=>goto(1)}>Prev</button>)}
           {qno==QuestionsArr.length-1 ? (<button>Submit</button>):''}
-          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button disabled="true" onClick={()=>goto(1)}>next</button>)}
+          {qno<QuestionsArr.length-1 ? (<button onClick={()=>nextquestion(qno)}>Next</button>):(<button disabled="true" onClick={()=>goto(1)}>next</button>)}
           </div>
 
 
