@@ -8,16 +8,29 @@ import QuestionsArr from './Questions'
 export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
-  let [Timer,setTimer] = useState(false)
+  // let [Timer,setTimer] = useState(false)
+  let [Timer,setTimer] = useState(true)
 
-  setTimeout(()=>{
-    setTimer(true)
-  },8000)
+
+  // setTimeout(()=>{
+  //   setTimer(true)
+  // },5000)
+
+  function nextquestion()
+  {
+    setqno(qno+1)
+  }
+  function prevquestion()
+  {
+    setqno(qno-1)
+  }
+
+
 
   function Questions()
   {
     return(
-    <React.Fragment>
+  <React.Fragment>
       <div id="Qpartandmap">
 
       
@@ -82,35 +95,24 @@ export default function TestInterface() {
 
 
 
-    </React.Fragment>  
-    }
-
-  function Result()
-  {
-    return(
-      <>
-     <h1>result</h1>
-      </>
-    )
+    </React.Fragment>    )
   }
 
-
-  function nextquestion()
-  {
-    setqno(qno+1)
-  }
-  function prevquestion()
-  {
-    setqno(qno-1)
-  }
-
+  // function Result()
+  // {
+  //   return(
+  //     <>
+  //    <h1>result</h1>
+  //     </>
+  //   )
+  // }
 
 
-
-  const navigate = useNavigate();
 
   return(
-    {}
+    <div>
+      {Timer?Result():Questions()}
+    </div>
   )
 
 }
