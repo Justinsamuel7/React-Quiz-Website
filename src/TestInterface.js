@@ -8,7 +8,18 @@ import QuestionsArr from './Questions'
 export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
-  
+
+  function nextquestion()
+  {
+    setqno(qno+1)
+  }
+  function prevquestion()
+  {
+    setqno(qno-1)
+  }
+
+
+
 
   const navigate = useNavigate();
 
@@ -57,8 +68,8 @@ export default function TestInterface() {
 
           })}
 
-          <button >Prev</button>
-          <button >Next</button>
+          <button onClick={prevquestion}>Prev</button>
+          <button onClick={nextquestion}>Next</button>
 
         </div>
 
