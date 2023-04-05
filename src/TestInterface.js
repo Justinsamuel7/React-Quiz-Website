@@ -48,19 +48,19 @@ export default function TestInterface() {
             <button disabled="true" onClick={()=>goto(4)}>5</button>
             <button disabled="true" onClick={()=>goto(5)}>6</button>
             <button disabled="true" onClick={()=>goto(6)}>7</button>
-            <button disabled="true" onClick={()=>goto(1)}>8</button>
-            <button disabled="true" onClick={()=>goto(1)}>9</button>
-            <button disabled="true" onClick={()=>goto(1)}>10</button>
-            <button disabled="true" onClick={()=>goto(1)}>11</button>
-            <button disabled="true" onClick={()=>goto(1)}>12</button>
-            <button disabled="true" onClick={()=>goto(1)}>13</button>
-            <button disabled="true" onClick={()=>goto(1)}>14</button>
-            <button disabled="true" onClick={()=>goto(1)}>15</button>
-            <button disabled="true" onClick={()=>goto(1)}>16</button>
-            <button disabled="true" onClick={()=>goto(1)}>17</button>
-            <button disabled="true" onClick={()=>goto(1)}>18</button>
-            <button disabled="true" onClick={()=>goto(1)}>19</button>
-            <button disabled="true" onClick={()=>goto(1)}>20</button>
+            <button disabled="true" onClick={()=>goto(7)}>8</button>
+            <button disabled="true" onClick={()=>goto(8)}>9</button>
+            <button disabled="true" onClick={()=>goto(9)}>10</button>
+            <button disabled="true" onClick={()=>goto(10)}>11</button>
+            <button disabled="true" onClick={()=>goto(11)}>12</button>
+            <button disabled="true" onClick={()=>goto(12)}>13</button>
+            <button disabled="true" onClick={()=>goto(13)}>14</button>
+            <button disabled="true" onClick={()=>goto(14)}>15</button>
+            <button disabled="true" onClick={()=>goto(15)}>16</button>
+            <button disabled="true" onClick={()=>goto(16)}>17</button>
+            <button disabled="true" onClick={()=>goto(17)}>18</button>
+            <button disabled="true" onClick={()=>goto(18)}>19</button>
+            <button disabled="true" onClick={()=>goto(19)}>20</button>
 
           </div>
 
