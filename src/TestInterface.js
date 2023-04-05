@@ -24,6 +24,11 @@ export default function TestInterface() {
     setqno(qno-1)
   }
 
+  function goto(Qno)
+  {
+    setqno(1)
+  }
+
 
 
   function Questions()
@@ -36,26 +41,26 @@ export default function TestInterface() {
         <div id="map">
 
           <div id="buttonsContainer">
-            <button>1</button>
-            <button disabled="true">2</button>
-            <button disabled="true">3</button>
-            <button disabled="true">4</button>
-            <button disabled="true">5</button>
-            <button disabled="true">6</button>
-            <button disabled="true">7</button>
-            <button disabled="true">8</button>
-            <button disabled="true">9</button>
-            <button disabled="true">10</button>
-            <button disabled="true">11</button>
-            <button disabled="true">12</button>
-            <button disabled="true">13</button>
-            <button disabled="true">14</button>
-            <button disabled="true">15</button>
-            <button disabled="true">16</button>
-            <button disabled="true">17</button>
-            <button disabled="true">18</button>
-            <button disabled="true">19</button>
-            <button disabled="true">20</button>
+            <button onClick={()=>goto(0)}>1</button>
+            <button disabled="true" onClick={()=>goto(1)}>2</button>
+            <button disabled="true" onClick={()=>goto(2)}>3</button>
+            <button disabled="true" onClick={()=>goto(3)}>4</button>
+            <button disabled="true" onClick={()=>goto(4)}>5</button>
+            <button disabled="true" onClick={()=>goto(5)}>6</button>
+            <button disabled="true" onClick={()=>goto(6)}>7</button>
+            <button disabled="true" onClick={()=>goto(1)}>8</button>
+            <button disabled="true" onClick={()=>goto(1)}>9</button>
+            <button disabled="true" onClick={()=>goto(1)}>10</button>
+            <button disabled="true" onClick={()=>goto(1)}>11</button>
+            <button disabled="true" onClick={()=>goto(1)}>12</button>
+            <button disabled="true" onClick={()=>goto(1)}>13</button>
+            <button disabled="true" onClick={()=>goto(1)}>14</button>
+            <button disabled="true" onClick={()=>goto(1)}>15</button>
+            <button disabled="true" onClick={()=>goto(1)}>16</button>
+            <button disabled="true" onClick={()=>goto(1)}>17</button>
+            <button disabled="true" onClick={()=>goto(1)}>18</button>
+            <button disabled="true" onClick={()=>goto(1)}>19</button>
+            <button disabled="true" onClick={()=>goto(1)}>20</button>
 
           </div>
 
@@ -78,9 +83,9 @@ export default function TestInterface() {
           </div>
 
           <div id="buttonscontainer">
-          {qno>0 ? (<button onClick={prevquestion}>Prev</button>):(<button disabled="true">Prev</button>)}
+          {qno>0 ? (<button onClick={prevquestion}>Prev</button>):(<button disabled="true" onClick={()=>goto(1)}>Prev</button>)}
           {qno==QuestionsArr.length-1 ? (<button>Submit</button>):''}
-          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button disabled="true">next</button>)}
+          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button disabled="true" onClick={()=>goto(1)}>next</button>)}
           </div>
 
 
