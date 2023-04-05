@@ -68,8 +68,11 @@ export default function TestInterface() {
 
           })}
 
-          <button onClick={prevquestion}>Prev</button>
-          <button onClick={nextquestion}>Next</button>
+          {qno>0 ? (<button onClick={prevquestion}>Prev</button>):''}
+          {qno<QuestionsArr.length-1 ? (<button onClick={nextquestion}>Next</button>):(<button>Submit</button>)}
+
+
+
 
         </div>
 
