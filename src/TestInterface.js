@@ -8,8 +8,7 @@ import QuestionsArr from './Questions'
 export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
-  // let [Timer,setTimer] = useState(false)
-  let [Timer,setTimer] = useState(true)
+  let [Timer,setTimer] = useState(false)
 
 
   // setTimeout(()=>{
@@ -98,14 +97,14 @@ export default function TestInterface() {
     </React.Fragment>    )
   }
 
-  // function Result()
-  // {
-  //   return(
-  //     <>
-  //    <h1>result</h1>
-  //     </>
-  //   )
-  // }
+  function Result()
+  {
+    return(
+      <>
+     <h1>result</h1>
+      </>
+    )
+  }
 
 
 
