@@ -16,7 +16,7 @@ p {
 }
 #map
 {
-  width: 30vw;
+  width: 25vw;
 }
 #buttonsContainer {
   display: grid;
@@ -30,7 +30,7 @@ p {
 }
 #Qpart
 {
-  width: 70vw;
+  width: 75vw;
   display: flex;
   justify-content: center;
   align-items: center;
