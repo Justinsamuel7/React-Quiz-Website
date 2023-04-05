@@ -22,7 +22,6 @@ export default function TestInterface() {
   { 
     let BtnsMap =  document.querySelectorAll('.BtnsMap')
     BtnsMap[qnoforbtn].disabled=false
-    
     // setQmap([...BtnsMap,BtnsMap[qnoforbtn].disabled=false])
     setqno(qno+1)
   }
