@@ -10,6 +10,7 @@ export default function TestInterface() {
 
   let [qno,setqno]=useState(0)
   let [Timer,setTimer] = useState(false)
+  let []
 
 
   // setTimeout(()=>{
@@ -29,9 +30,9 @@ export default function TestInterface() {
     setqno(qno-1)
   }
 
-  function goto(Qno)
-  {
-    setqno(Qno)
+  function goto(num)
+  {  
+    setqno(num)
   }
 
 
