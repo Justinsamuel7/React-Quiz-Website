@@ -7,6 +7,9 @@ import QuestionsArr from './Questions'
 
 export default function TestInterface() {
 
+  let [qno,setqno]=useState(0)
+  
+
   const navigate = useNavigate();
 
   return(
@@ -43,7 +46,16 @@ export default function TestInterface() {
         </div>
 
         <div id="Qpart">
-          
+
+          <p>{QuestionsArr[qno].question}</p>
+          {QuestionsArr[qno].options.map((ele,index)=>{
+            return(
+              <li key={index}>
+                {ele}
+              </li>
+            )
+
+          })}
 
           <button >Prev</button>
           <button >Next</button>
