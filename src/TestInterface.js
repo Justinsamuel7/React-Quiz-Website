@@ -83,10 +83,13 @@ export default function TestInterface() {
           <p>{qno+1}. {QuestionsArr[qno].question}</p>
           <div class="optionscontainer">
           {QuestionsArr[qno].options.map((ele,index)=>{
+
+            let name=ele.name;
+            let value=ele.op;
             return(
               <div key={index}>
-              <input type="radio"  name="fav_language" value={ele}/>
-              <label>{ele}</label>
+              <input type="radio"  name={name} value={value}/>
+              <label for={value}>{value}</label>
               </div>
               )
 
