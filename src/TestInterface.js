@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
@@ -7,6 +7,24 @@ let Marks=0;
 
 
 export default function TestInterface() {
+
+  // useEffect(() => {
+  //   const element = document.getElementById("Qpartandmap");
+  //   element.requestFullscreen();
+
+  //   document.addEventListener("fullscreenchange", () => {
+  //     if (document.fullscreenElement === element) {
+  //       console.log("Entered full-screen mode.");
+  //     } else {
+  //       console.log("Exited full-screen mode.");
+  //     }
+  //   });
+
+  //   return () => {
+  //     document.removeEventListener("fullscreenchange", () => {});
+  //     document.exitFullscreen();
+  //   }
+  // }, []);
 
   let [qno,setqno]=useState(0) // To manage the question
   let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
@@ -41,11 +59,14 @@ export default function TestInterface() {
 
 
   // to Display the question
+
+  //style={{ backgroundColor: "#fff" }}
+
   function Questions()
   {
     return(
   <React.Fragment>
-      <div id="Qpartandmap">
+      <div id="Qpartandmap" >
 
       
         <div id="map">
