@@ -19,7 +19,9 @@ export default function App() {
   return (
     <div>
       <h1>Welcome to Test</h1>
-      <p>Please enter your name</p><input type="text" placeholder="Name" id="nameinpbox"/><button onClick={storename}>Enter</button>
+      <p>Please enter your name</p>
+      <input type="text" placeholder="Name" id="nameinpbox"/>
+      <button onClick={storename}>Enter</button>
       {/* {Timer? Result() : Questions()} */}
     </div>
   );
