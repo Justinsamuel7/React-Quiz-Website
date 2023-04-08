@@ -2,6 +2,9 @@ import React,{useState,useEffect} from "react";
 import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
+import ShareName from './App'
+
+let CandidateName=ShareName;
 
 
 export default function TestInterface() {
@@ -79,31 +82,32 @@ export default function TestInterface() {
   {
     return(
   <React.Fragment>
+    <h5>{CandidateName}</h5>
       <div id="Qpartandmap" >
       
         <div id="map">
 
           <div id="buttonsContainer">
             <button disabled={BtnDisabled[0]} onClick={()=>goto(0)}>1</button>
-            <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} class="BtnsMap" > 2 </button>
-            <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} class="BtnsMap" > 3 </button>
-            <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} class="BtnsMap" > 4 </button>
-            <button disabled={BtnDisabled[4]} onClick={()=>goto(4)} class="BtnsMap" > 5 </button>
-            <button disabled={BtnDisabled[5]} onClick={()=>goto(5)} class="BtnsMap" > 6 </button>
-            <button disabled={BtnDisabled[6]} onClick={()=>goto(6)} class="BtnsMap" > 7 </button>
-            <button disabled={BtnDisabled[7]} onClick={()=>goto(7)} class="BtnsMap" > 8 </button>
-            <button disabled={BtnDisabled[8]} onClick={()=>goto(8)} class="BtnsMap" > 9 </button>
-            <button disabled={BtnDisabled[9]} onClick={()=>goto(9)} class="BtnsMap"> 10 </button>
-            <button disabled={BtnDisabled[10]} onClick={()=>goto(10)} class="BtnsMap"> 11 </button>
-            <button disabled={BtnDisabled[11]} onClick={()=>goto(11)} class="BtnsMap"> 12 </button>
-            <button disabled={BtnDisabled[12]} onClick={()=>goto(12)} class="BtnsMap"> 13 </button>
-            <button disabled={BtnDisabled[13]} onClick={()=>goto(13)} class="BtnsMap"> 14 </button>
-            <button disabled={BtnDisabled[14]} onClick={()=>goto(14)} class="BtnsMap"> 15 </button>
-            <button disabled={BtnDisabled[15]} onClick={()=>goto(15)} class="BtnsMap"> 16 </button>
-            <button disabled={BtnDisabled[16]} onClick={()=>goto(16)} class="BtnsMap"> 17 </button>
-            <button disabled={BtnDisabled[17]} onClick={()=>goto(17)} class="BtnsMap"> 18 </button>
-            <button disabled={BtnDisabled[18]} onClick={()=>goto(18)} class="BtnsMap"> 19 </button>
-            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} class="BtnsMap"> 20 </button>
+            <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} className="BtnsMap" > 2 </button>
+            <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} className="BtnsMap" > 3 </button>
+            <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} className="BtnsMap" > 4 </button>
+            <button disabled={BtnDisabled[4]} onClick={()=>goto(4)} className="BtnsMap" > 5 </button>
+            <button disabled={BtnDisabled[5]} onClick={()=>goto(5)} className="BtnsMap" > 6 </button>
+            <button disabled={BtnDisabled[6]} onClick={()=>goto(6)} className="BtnsMap" > 7 </button>
+            <button disabled={BtnDisabled[7]} onClick={()=>goto(7)} className="BtnsMap" > 8 </button>
+            <button disabled={BtnDisabled[8]} onClick={()=>goto(8)} className="BtnsMap" > 9 </button>
+            <button disabled={BtnDisabled[9]} onClick={()=>goto(9)} className="BtnsMap"> 10 </button>
+            <button disabled={BtnDisabled[10]} onClick={()=>goto(10)} className="BtnsMap"> 11 </button>
+            <button disabled={BtnDisabled[11]} onClick={()=>goto(11)} className="BtnsMap"> 12 </button>
+            <button disabled={BtnDisabled[12]} onClick={()=>goto(12)} className="BtnsMap"> 13 </button>
+            <button disabled={BtnDisabled[13]} onClick={()=>goto(13)} className="BtnsMap"> 14 </button>
+            <button disabled={BtnDisabled[14]} onClick={()=>goto(14)} className="BtnsMap"> 15 </button>
+            <button disabled={BtnDisabled[15]} onClick={()=>goto(15)} className="BtnsMap"> 16 </button>
+            <button disabled={BtnDisabled[16]} onClick={()=>goto(16)} className="BtnsMap"> 17 </button>
+            <button disabled={BtnDisabled[17]} onClick={()=>goto(17)} className="BtnsMap"> 18 </button>
+            <button disabled={BtnDisabled[18]} onClick={()=>goto(18)} className="BtnsMap"> 19 </button>
+            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} className="BtnsMap"> 20 </button>
           </div>
           <button onClick={SubmitTest} id="leftsideSubmit"> Submit </button>
 
@@ -114,7 +118,7 @@ export default function TestInterface() {
           <div>
 
           <p>{qno+1}. {QuestionsArr[qno].question}</p>
-          <div class="optionscontainer">
+          <div className="optionscontainer">
           {QuestionsArr[qno].options.map((Option,index)=>{
 
             return(
