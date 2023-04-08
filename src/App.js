@@ -2,9 +2,7 @@ import React,{useState} from "react";
 import "./style.css";
 import {Router,Route,Link,useNavigate} from 'react-router-dom'
 
-let ShareName="";
-export default ShareName;
-
+export let Name="";
 
 export default function App() {
   let navigate=useNavigate();
@@ -18,11 +16,11 @@ export default function App() {
   }
 
   function storename()
-{
- ShareName=name;
- navigate('/TestInterface')
- console.log(name)
-}
+  {
+    Name=name.UserName;
+    navigate('/TestInterface')
+    console.log(name)
+  }
 
   return (
     <div>

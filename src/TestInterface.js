@@ -2,9 +2,8 @@ import React,{useState,useEffect} from "react";
 import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
-import ShareName from './App'
+import {Name} from './App'
 
-let CandidateName=ShareName;
 
 
 export default function TestInterface() {
@@ -82,7 +81,7 @@ export default function TestInterface() {
   {
     return(
   <React.Fragment>
-    <h5>{CandidateName}</h5>
+    <h5>Name : {Name}</h5>
       <div id="Qpartandmap" >
       
         <div id="map">
