@@ -3,13 +3,14 @@ import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
 import {Name} from './App'
+import CountdownTimer from './CountDown'
 
 
 
 export default function TestInterface() {
 
   // useEffect(() => {
-  //   const element = document.getElementById("Qpartandmap");
+  //   const element = document.getElementById("TestScreen");
   //   element.requestFullscreen();
 
   //   document.addEventListener("fullscreenchange", () => {
@@ -72,33 +73,6 @@ export default function TestInterface() {
   }
 
 
-  
-var countDownTime = 20 * 60 * 1000; 
-
-var timerElement = document.getElementById("countdown-timer"); 
-
-var countdown = setInterval(function() {
-
-  
-var minutes = Math.floor(countDownTime / (60 * 1000));
-var seconds = Math.floor((countDownTime % (60 * 1000)) / 1000);
-
-timerElement.innerHTML = minutes + "m " + seconds + "s ";
-
- 
-countDownTime -= 100000;
-
-  
-if(minutes<10)
-    {
-      timerElement.style.color='red'
-    }
-if (countDownTime < 0) {
-    clearInterval(countdown);
-    timerElement.innerHTML = "Time's up!";
-  }
-}, 1000);
-
 
   // to Display the question
 
@@ -107,10 +81,11 @@ if (countDownTime < 0) {
   function Questions()
   {
     return(
-  <React.Fragment>
-    <div> 
+  <React.Fragment >
+    <div id="TestScreen">
+    <div id="Interface_Top"> 
       <div><h2>TestPro</h2></div>
-      <div><h4>Name : {Name}</h4><h3></h3></div>
+      <div><h4>Name : {Name}</h4><h3>Time Remaining: <CountdownTimer/></h3></div>
     </div>
 
       <div id="Qpartandmap" >
@@ -171,6 +146,7 @@ if (countDownTime < 0) {
           </div>
         </div>
 
+      </div>
       </div>
 
     </React.Fragment>)
