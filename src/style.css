@@ -82,6 +82,9 @@ p {
   font-size: x-large;
 
 }
+.true{
+  color: red;
+}
 #buttonscontainer
 {
   display: flex;
