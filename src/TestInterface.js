@@ -171,7 +171,7 @@ export default function TestInterface() {
     return(
       <>
      <h1>result Page </h1>
-     <h3>Your Marks {Mark}/20</h3>
+     <h3>Your Marks {Mark}/{QuestionsArr.length}</h3>
       </>
     )
   }
