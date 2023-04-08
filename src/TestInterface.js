@@ -29,7 +29,7 @@ export default function TestInterface() {
   let [qno,setqno]=useState(0) // To manage the question
   let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
 
-  let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true])
+  let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]) //Button Map Disabled Values
 
   // let [Qmap,setQmap] = useState(true)
 
@@ -43,8 +43,9 @@ export default function TestInterface() {
     // let BtnsMap =  document.querySelectorAll('.BtnsMap')
     // BtnsMap[qnoforbtn].disabled=false
     // setQmap([...BtnsMap,BtnsMap[qnoforbtn].disabled=false])
+
     let TempArr=[...BtnDisabled]
-    TempArr[qnoforbtn]=false;
+    TempArr[qnoforbtn+1]=false;
     setBtnDisabled(TempArr);
     setqno(qno+1)
   }
@@ -72,7 +73,6 @@ export default function TestInterface() {
     return(
   <React.Fragment>
       <div id="Qpartandmap" >
-
       
         <div id="map">
 
