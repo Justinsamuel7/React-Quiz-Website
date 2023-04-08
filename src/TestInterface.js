@@ -39,9 +39,11 @@ export default function TestInterface() {
   // setTimeout(()=>{
   //   setTimerANDTestON(true)
   // },5000)
-  function HandleSelection()
+  function HandleSelection(MyAnswer,Qno)
   {
-    
+    let TempSelectedAnswers = [...SelectedAnswers];
+    TempSelectedAnswers[Qno]=MyAnswer;
+    setSelectedAnswers(TempSelectedAnswers);
   }
 
   function nextquestion(qnoforbtn)
@@ -118,7 +120,7 @@ export default function TestInterface() {
 
             return(
               <div key={index}>
-              <input type="radio"  name="Options" value={Option} Checked={SelectedAnswers[qno]===Option} onChange={()=>HandleSelection()}/>
+              <input type="radio"  name="Options" value={Option} checked={SelectedAnswers[qno]===Option} onChange={()=>HandleSelection(Option,qno)}/>
               <label>{Option}</label>
               </div>
               )
@@ -144,6 +146,7 @@ export default function TestInterface() {
 
   function SubmitTest()
   {
+    
     setTimerANDTestON(true);
   }
   // To display the result at submit button or after time runs out
