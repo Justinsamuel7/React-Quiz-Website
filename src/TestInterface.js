@@ -145,13 +145,14 @@ export default function TestInterface() {
 
   function SubmitTest()
   {
+    let CalculateMarks=0;
     QuestionsArr.forEach((ele, index)=>{
       if(ele.Answer === SelectedAnswers[index])
       {
-
+        CalculateMarks++
       }
     })
-    setMark
+    setMark(CalculateMarks);
     setTimerANDTestON(true);
   }
   // To display the result at submit button or after time runs out
@@ -160,7 +161,7 @@ export default function TestInterface() {
     return(
       <>
      <h1>result Page </h1>
-     <h3>Your Marks _/20</h3>
+     <h3>Your Marks {Mark}/20</h3>
       </>
     )
   }
