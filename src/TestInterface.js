@@ -72,6 +72,33 @@ export default function TestInterface() {
   }
 
 
+  
+var countDownTime = 20 * 60 * 1000; 
+
+var timerElement = document.getElementById("countdown-timer"); 
+
+var countdown = setInterval(function() {
+
+  
+var minutes = Math.floor(countDownTime / (60 * 1000));
+var seconds = Math.floor((countDownTime % (60 * 1000)) / 1000);
+
+timerElement.innerHTML = minutes + "m " + seconds + "s ";
+
+ 
+countDownTime -= 100000;
+
+  
+if(minutes<10)
+    {
+      timerElement.style.color='red'
+    }
+if (countDownTime < 0) {
+    clearInterval(countdown);
+    timerElement.innerHTML = "Time's up!";
+  }
+}, 1000);
+
 
   // to Display the question
 
@@ -81,7 +108,11 @@ export default function TestInterface() {
   {
     return(
   <React.Fragment>
-    <h5>Name : {Name}</h5>
+    <div> 
+      <div><h2>TestPro</h2></div>
+      <div><h4>Name : {Name}</h4><h3></h3></div>
+    </div>
+
       <div id="Qpartandmap" >
       
         <div id="map">
