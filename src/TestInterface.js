@@ -3,8 +3,6 @@ import "./style.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
 
-let Marks=0;
-
 
 export default function TestInterface() {
 
@@ -26,7 +24,7 @@ export default function TestInterface() {
   //   }
   // }, []);
 
-  
+  let [Mark,setMark]=useState(0)
   let [qno,setqno]=useState(0) // To manage the question
   let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
 
@@ -153,6 +151,7 @@ export default function TestInterface() {
 
       }
     })
+    setMark
     setTimerANDTestON(true);
   }
   // To display the result at submit button or after time runs out
