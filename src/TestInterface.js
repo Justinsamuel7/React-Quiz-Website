@@ -26,6 +26,7 @@ export default function TestInterface() {
   //   }
   // }, []);
 
+  
   let [qno,setqno]=useState(0) // To manage the question
   let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
 
@@ -146,7 +147,12 @@ export default function TestInterface() {
 
   function SubmitTest()
   {
-    
+    QuestionsArr.forEach((ele, index)=>{
+      if(ele.Answer === SelectedAnswers[index])
+      {
+
+      }
+    })
     setTimerANDTestON(true);
   }
   // To display the result at submit button or after time runs out
