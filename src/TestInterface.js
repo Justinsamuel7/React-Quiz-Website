@@ -31,12 +31,18 @@ export default function TestInterface() {
 
   let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]) //Button Map Disabled Values
 
+  let [SelectedAnswers,setSelectedAnswers]=useState([]);
+
   // let [Qmap,setQmap] = useState(true)
 
 
   // setTimeout(()=>{
   //   setTimerANDTestON(true)
   // },5000)
+  function HandleSelection()
+  {
+    
+  }
 
   function nextquestion(qnoforbtn)
   { 
@@ -108,14 +114,12 @@ export default function TestInterface() {
 
           <p>{qno+1}. {QuestionsArr[qno].question}</p>
           <div class="optionscontainer">
-          {QuestionsArr[qno].options.map((ele,index)=>{
+          {QuestionsArr[qno].options.map((Option,index)=>{
 
-            let name=ele;
-            let value=ele;
             return(
               <div key={index}>
-              <input type="radio"  name={name} value={value}/>
-              <label for={value}>{value}</label>
+              <input type="radio"  name="Options" value={Option} Checked={SelectedAnswers[qno]===Option} onChange={()=>HandleSelection()}/>
+              <label>{Option}</label>
               </div>
               )
 
