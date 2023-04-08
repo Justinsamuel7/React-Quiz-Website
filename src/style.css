@@ -70,6 +70,12 @@ p {
   width: 5rem;
   height: 2rem;
 }
+#PreNextbuttonscontainer
+{
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
 .optionscontainer input
 {
   margin: 1rem;
