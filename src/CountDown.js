@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function CountdownTimer() {
   let [countDownTime, setCountDownTime] = useState(20 * 60 * 1000);
   let [timerDisplay, setTimerDisplay] = useState("");
-  let [timerColor, setTimerColor] = useState("");
+  let [timerColor, setTimerColor] = useState("skyblue");
 
   useEffect(() => {
       let interval = setInterval(() => {
