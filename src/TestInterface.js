@@ -183,21 +183,29 @@ export default function TestInterface() {
 
   function SubmitTest()
   {
-    let CalculateMarks=0;
-    QuestionsArr.forEach((ele, index)=>{
-      if(ele.Answer === SelectedAnswers[index])
-      {
-        CalculateMarks++
-      }
-    })
-    setMark(CalculateMarks);
-    setTimerANDTestON(true);
+    if (confirm("Are you sure you want to Submit the Test?", "Yes", "No")) 
+    {
+      let CalculateMarks=0;
+      QuestionsArr.forEach((ele, index)=>{
+        if(ele.Answer === SelectedAnswers[index])
+        {
+          CalculateMarks++
+        }
+      })
+      setMark(CalculateMarks);
+      setTimerANDTestON(true);
+    } 
+    else 
+    {
+      console.log("Cancelled, Continue Test")
+    }
   }
   // To display the result at submit button or after time runs out
   function Result()
   {
     return(
       <>
+      
      <h1>result Page </h1>
      <h3>Your Marks {Mark}/{QuestionsArr.length}</h3>
       </>
