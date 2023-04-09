@@ -33,6 +33,8 @@ export default function TestInterface() {
 
   let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]) //Button Map Disabled Values
 
+
+
   let [SelectedAnswers,setSelectedAnswers]=useState([]);
 
   // let [Qmap,setQmap] = useState(true)
@@ -73,6 +75,18 @@ export default function TestInterface() {
   }
 
 
+  const YesActive = {
+    color: 'red',
+    border: '3px solid rgb(0, 214, 135)'
+
+  };
+  const NotActive = {
+    color: 'black',
+    border: '1px solid rgb(79, 211, 167)'
+  };
+
+  let [ActiveQuestion,setActiveQuestion]=useState([YesActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]) //Active Question CSS
+
 
   // to Display the question
 
@@ -93,7 +107,7 @@ export default function TestInterface() {
         <div id="map">
 
           <div id="buttonsContainer">
-            <button disabled={BtnDisabled[0]} onClick={()=>goto(0)}>1</button>
+            <button disabled={BtnDisabled[0]} onClick={()=>goto(0)} style={ActiveQuestion[0]}>1</button>
             <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} className="BtnsMap" > 2 </button>
             <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} className="BtnsMap" > 3 </button>
             <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} className="BtnsMap" > 4 </button>
