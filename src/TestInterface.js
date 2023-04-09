@@ -52,9 +52,10 @@ export default function TestInterface() {
 
   function nextquestion(qnoforbtn)
   { 
-    // let BtnsMap =  document.querySelectorAll('.BtnsMap')
-    // BtnsMap[qnoforbtn].disabled=false
-    // setQmap([...BtnsMap,BtnsMap[qnoforbtn].disabled=false])
+    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    TempActiveQuestion[qnoforbtn+1]=YesActive;
+    setActiveQuestion(TempActiveQuestion);
 
     let TempArr=[...BtnDisabled]
     TempArr[qnoforbtn+1]=false;
@@ -65,12 +66,22 @@ export default function TestInterface() {
 
   function prevquestion()
   {
+    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    TempActiveQuestion[qno-1]=YesActive;
+    setActiveQuestion(TempActiveQuestion);
+
     setqno(qno-1)
   }
 
   // travel through the active questions
   function goto(num)
   {  
+    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    TempActiveQuestion[num]=YesActive;
+    setActiveQuestion(TempActiveQuestion);
+
     setqno(num)
   }
 
@@ -81,8 +92,8 @@ export default function TestInterface() {
 
   };
   const NotActive = {
-    color: 'black',
-    border: '1px solid rgb(79, 211, 167)'
+    // color: 'black',
+    // border: '1px solid rgb(79, 211, 167)'
   };
 
   let [ActiveQuestion,setActiveQuestion]=useState([YesActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]) //Active Question CSS
@@ -108,25 +119,25 @@ export default function TestInterface() {
 
           <div id="buttonsContainer">
             <button disabled={BtnDisabled[0]} onClick={()=>goto(0)} style={ActiveQuestion[0]}>1</button>
-            <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} className="BtnsMap" > 2 </button>
-            <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} className="BtnsMap" > 3 </button>
-            <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} className="BtnsMap" > 4 </button>
-            <button disabled={BtnDisabled[4]} onClick={()=>goto(4)} className="BtnsMap" > 5 </button>
-            <button disabled={BtnDisabled[5]} onClick={()=>goto(5)} className="BtnsMap" > 6 </button>
-            <button disabled={BtnDisabled[6]} onClick={()=>goto(6)} className="BtnsMap" > 7 </button>
-            <button disabled={BtnDisabled[7]} onClick={()=>goto(7)} className="BtnsMap" > 8 </button>
-            <button disabled={BtnDisabled[8]} onClick={()=>goto(8)} className="BtnsMap" > 9 </button>
-            <button disabled={BtnDisabled[9]} onClick={()=>goto(9)} className="BtnsMap"> 10 </button>
-            <button disabled={BtnDisabled[10]} onClick={()=>goto(10)} className="BtnsMap"> 11 </button>
-            <button disabled={BtnDisabled[11]} onClick={()=>goto(11)} className="BtnsMap"> 12 </button>
-            <button disabled={BtnDisabled[12]} onClick={()=>goto(12)} className="BtnsMap"> 13 </button>
-            <button disabled={BtnDisabled[13]} onClick={()=>goto(13)} className="BtnsMap"> 14 </button>
-            <button disabled={BtnDisabled[14]} onClick={()=>goto(14)} className="BtnsMap"> 15 </button>
-            <button disabled={BtnDisabled[15]} onClick={()=>goto(15)} className="BtnsMap"> 16 </button>
-            <button disabled={BtnDisabled[16]} onClick={()=>goto(16)} className="BtnsMap"> 17 </button>
-            <button disabled={BtnDisabled[17]} onClick={()=>goto(17)} className="BtnsMap"> 18 </button>
-            <button disabled={BtnDisabled[18]} onClick={()=>goto(18)} className="BtnsMap"> 19 </button>
-            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} className="BtnsMap"> 20 </button>
+            <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} style={ActiveQuestion[1]} > 2 </button>
+            <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} style={ActiveQuestion[2]} > 3 </button>
+            <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} style={ActiveQuestion[3]} > 4 </button>
+            <button disabled={BtnDisabled[4]} onClick={()=>goto(4)} style={ActiveQuestion[4]} > 5 </button>
+            <button disabled={BtnDisabled[5]} onClick={()=>goto(5)} style={ActiveQuestion[5]} > 6 </button>
+            <button disabled={BtnDisabled[6]} onClick={()=>goto(6)} style={ActiveQuestion[6]} > 7 </button>
+            <button disabled={BtnDisabled[7]} onClick={()=>goto(7)} style={ActiveQuestion[7]} > 8 </button>
+            <button disabled={BtnDisabled[8]} onClick={()=>goto(8)} style={ActiveQuestion[8]} > 9 </button>
+            <button disabled={BtnDisabled[9]} onClick={()=>goto(9)} style={ActiveQuestion[9]}> 10 </button>
+            <button disabled={BtnDisabled[10]} onClick={()=>goto(10)} style={ActiveQuestion[10]}> 11 </button>
+            <button disabled={BtnDisabled[11]} onClick={()=>goto(11)} style={ActiveQuestion[11]}> 12 </button>
+            <button disabled={BtnDisabled[12]} onClick={()=>goto(12)} style={ActiveQuestion[12]}> 13 </button>
+            <button disabled={BtnDisabled[13]} onClick={()=>goto(13)} style={ActiveQuestion[13]}> 14 </button>
+            <button disabled={BtnDisabled[14]} onClick={()=>goto(14)} style={ActiveQuestion[14]}> 15 </button>
+            <button disabled={BtnDisabled[15]} onClick={()=>goto(15)} style={ActiveQuestion[15]}> 16 </button>
+            <button disabled={BtnDisabled[16]} onClick={()=>goto(16)} style={ActiveQuestion[16]}> 17 </button>
+            <button disabled={BtnDisabled[17]} onClick={()=>goto(17)} style={ActiveQuestion[17]}> 18 </button>
+            <button disabled={BtnDisabled[18]} onClick={()=>goto(18)} style={ActiveQuestion[18]}> 19 </button>
+            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} style={ActiveQuestion[19]}> 20 </button>
           </div>
           <button onClick={SubmitTest} id="leftsideSubmit"> Submit </button>
 
