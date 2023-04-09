@@ -88,8 +88,8 @@ export default function TestInterface() {
 
   const YesActive = {
     color: 'red',
-    border: '3px solid rgb(0, 214, 135)'
-
+    border: '3px solid rgb(0, 214, 135)',
+    transform: 'scale(1.5)'
   };
   const NotActive = {
     // color: 'black',
