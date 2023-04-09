@@ -9,23 +9,23 @@ import CountdownTimer from './CountDown'
 
 export default function TestInterface() {
 
-  // useEffect(() => {
-  //   const element = document.getElementById("TestScreen");
-  //   element.requestFullscreen();
+  useEffect(() => {
+    const element = document.getElementById("TestScreen");
+    element.requestFullscreen();
 
-  //   document.addEventListener("fullscreenchange", () => {
-  //     if (document.fullscreenElement === element) {
-  //       console.log("Entered full-screen mode.");
-  //     } else {
-  //       console.log("Exited full-screen mode.");
-  //     }
-  //   });
+    document.addEventListener("fullscreenchange", () => {
+      if (document.fullscreenElement === element) {
+        console.log("Entered full-screen mode.");
+      } else {
+        console.log("Exited full-screen mode.");
+      }
+    });
 
-  //   return () => {
-  //     document.removeEventListener("fullscreenchange", () => {});
-  //     document.exitFullscreen();
-  //   }
-  // }, []);
+    return () => {
+      document.removeEventListener("fullscreenchange", () => {});
+      document.exitFullscreen();
+    }
+  }, []);
 
   let [Mark,setMark]=useState(0)
   let [qno,setqno]=useState(0) // To manage the question
@@ -108,9 +108,9 @@ export default function TestInterface() {
   {
     return(
   <React.Fragment >
-    <div id="TestScreen">
+    <div id="TestScreen" style={{ backgroundColor: "#fff" }}>
     <div id="Interface_Top"> 
-      <div><h2 className="Pagecolor1"><span className="Pagecolor">Just</span>est<span className="Pagecolor">IN</span></h2></div>
+      <div><h2 className="Pagecolor1"><span className="Pagecolor">Just</span>est.<span className="Pagecolor">IN</span></h2></div>
       <div><h4>Name : {Name}</h4><h3>Time Remaining: <CountdownTimer/></h3></div>
     </div>
 
@@ -185,6 +185,7 @@ export default function TestInterface() {
   {
     if (confirm("Are you sure you want to Submit the Test?", "Yes", "No")) 
     {
+
       let CalculateMarks=0;
       QuestionsArr.forEach((ele, index)=>{
         if(ele.Answer === SelectedAnswers[index])
@@ -194,6 +195,7 @@ export default function TestInterface() {
       })
       setMark(CalculateMarks);
       setTimerANDTestON(true);
+
     } 
     else 
     {
