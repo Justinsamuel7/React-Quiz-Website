@@ -88,8 +88,8 @@ export default function TestInterface() {
 
 
   const YesActive = {
-    color: 'red',
-    border: '3px solid rgb(0, 214, 135)',
+    color: 'black',
+    border: '2px solid rgb(0, 214, 135)',
     transform: 'scale(1.5)'
   };
   const NotActive = {
@@ -165,9 +165,9 @@ export default function TestInterface() {
           </div>
 
           <div id="PreNextbuttonscontainer">
-          {qno>0 ? (<button onClick={prevquestion}>&#10096;&#10096;  Prev</button>):(<button disabled="true" onClick={()=>goto(1)}>&#10096;&#10096;  Prev</button>)}
+          {qno>0 ? (<button onClick={prevquestion}>&#10096;&#10096;  Prev</button>):(<button className="discur" disabled="true" onClick={()=>goto(1)}>&#10096;&#10096;  Prev</button>)}
           {qno==QuestionsArr.length-1 ? (<button onClick={SubmitTest}>Submit</button>):''}
-          {qno<QuestionsArr.length-1 ? (<button onClick={()=>nextquestion(qno)}>Next  &#10097;&#10097;</button>):(<button disabled="true">Next  &#10097;&#10097;</button>)}
+          {qno<QuestionsArr.length-1 ? (<button onClick={()=>nextquestion(qno)}>Next  &#10097;&#10097;</button>):(<button disabled="true" className="discur">Next  &#10097;&#10097;</button>)}
           </div>
 
 
