@@ -110,7 +110,7 @@ export default function TestInterface() {
   <React.Fragment >
     <div id="TestScreen">
     <div id="Interface_Top"> 
-      <div><h2>TestPro</h2></div>
+      <div><h2 className="Pagecolor1"><span className="Pagecolor">Just</span>est<span className="Pagecolor">IN</span></h2></div>
       <div><h4>Name : {Name}</h4><h3>Time Remaining: <CountdownTimer/></h3></div>
     </div>
 
