@@ -154,8 +154,10 @@ export default function TestInterface() {
 
             return(
               <div key={index}>
+              <label>
               <input type="radio"  name="Options" value={Option} checked={SelectedAnswers[qno]===Option} onChange={()=>HandleSelection(Option,qno)}/>
-              <label>{Option}</label>
+              <span id="option-text">{Option}</span>
+              </label>
               </div>
               )
 

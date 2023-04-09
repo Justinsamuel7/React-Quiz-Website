@@ -104,4 +104,45 @@ button,input,label
 {
   border: 3px solid rgb(0, 214, 135);
 } */
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label span
+{
+  width: 20rem;
+  border: 2px solid red;
+}
+
+label span:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+label input[type="radio"]:checked + span:before {
+  
+  background-color: green;
+  border-color: green;
+  content: "✔";
+  color: #fff;
+  text-align: center;
+  line-height: 16px;
+}
+
+label input[type="radio"]:checked + span {
+
+  background-color: green;
+  color: rgb(255, 255, 255);
+}
 
