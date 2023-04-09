@@ -41,8 +41,9 @@ export default function TestInterface() {
 
 
   // setTimeout(()=>{
-  //   setTimerANDTestON(true)
-  // },5000)
+  //   SubmitTest();
+  // },10000)
+
   function HandleSelection(MyAnswer,Qno)
   {
     let TempSelectedAnswers = [...SelectedAnswers];
