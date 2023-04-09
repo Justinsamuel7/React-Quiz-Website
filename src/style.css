@@ -128,7 +128,7 @@ label {
   margin-left: 1rem;
   margin-bottom: 1rem;
   width: 50vw;
-  box-shadow: 0px 0px 5px blue;
+  box-shadow: 0px 0px 5px rgb(67, 202, 255);
   border-radius: 0.5rem;
 }
 label span {
@@ -155,8 +155,8 @@ label span:before {
 
 label input[type="radio"]:checked + span:before {
   
-  background-color: green;
-  border-color: green;
+  background-color: rgb(97, 210, 255);
+  border-color:rgb(39, 194, 255);
   content: "✔";
   color: #fff;
   text-align: center;
@@ -165,7 +165,7 @@ label input[type="radio"]:checked + span:before {
 
 label input[type="radio"]:checked +span {
 
-  background-color: green;
-  color: rgb(255, 255, 255);
+  background-color: rgb(97, 210, 255);
+  border-color: rgb(0, 43, 163);
 }
 
