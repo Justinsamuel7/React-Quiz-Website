@@ -25,6 +25,7 @@ button,input,label
   border-radius: 0.5rem;
   height: 30rem;
   margin-right: 2rem;
+  pa
 }
 #map
 {
@@ -107,17 +108,20 @@ button,input,label
 label {
   display: block;
   margin-bottom: 1rem;
+  width: 30rem;
+  box-shadow: 0px 0px 5px blue;
+  border-radius: 0.5rem;
+}
+label span {
+  display: inline-block;
+  width: 30rem;
+  border-radius: 0.5rem;
 }
 
 input[type="radio"] {
   display: none;
 }
 
-label span
-{
-  width: 20rem;
-  border: 2px solid red;
-}
 
 label span:before {
   content: "";
@@ -125,7 +129,7 @@ label span:before {
   width: 1.5rem;
   height: 1.5rem;
   border: 2px solid #ccc;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -140,7 +144,7 @@ label input[type="radio"]:checked + span:before {
   line-height: 16px;
 }
 
-label input[type="radio"]:checked + span {
+label input[type="radio"]:checked +span {
 
   background-color: green;
   color: rgb(255, 255, 255);
