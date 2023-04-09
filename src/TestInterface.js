@@ -205,13 +205,14 @@ export default function TestInterface() {
   {
     return(
       <>
-      
-     <h1>result Page </h1>
-     <h3>Your Marks {Mark}/{QuestionsArr.length}</h3>
+     <h1>Mr/Ms. {Name},  Your Result is Ready...</h1>
+     <h3>You Attempted {SelectedAnswers.length} out of {QuestionsArr.length} Questions</h3>
+     <h3>Your Marks : {Mark}/{QuestionsArr.length}</h3>
+     <h3>Percentage : {(Mark/QuestionsArr.length)*100}%</h3>
+     <h4>Thank You!</h4>
       </>
     )
   }
-
 
 
   return(
