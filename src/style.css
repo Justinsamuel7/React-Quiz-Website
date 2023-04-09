@@ -88,7 +88,10 @@ button,input,label
   width: 5rem;
   height: 2rem;
 }
-
+#discur
+{
+  cursor: not-allowed;
+}
 #PreNextbuttonscontainer
 {
   width: 50vw;
