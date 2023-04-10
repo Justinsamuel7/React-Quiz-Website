@@ -39,10 +39,22 @@ export default function TestInterface() {
 
   // let [Qmap,setQmap] = useState(true)
 
+  let TestDuration=20*60*1000
 
-  // setTimeout(()=>{
-  //   SubmitTest();
-  // },10000)
+
+  setTimeout(()=>{
+
+    let CalculateMarks=0;
+    QuestionsArr.forEach((ele, index)=>{
+      if(ele.Answer === SelectedAnswers[index])
+      {
+        CalculateMarks++
+      }
+    })
+    setMark(CalculateMarks);
+    setTimerANDTestON(true);
+
+  },TestDuration)
 
   function HandleSelection(MyAnswer,Qno)
   {
