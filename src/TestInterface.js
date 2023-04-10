@@ -131,7 +131,7 @@ export default function TestInterface() {
         <div id="map">
 
           <div id="buttonsContainer">
-            <button disabled={BtnDisabled[0]} onClick={()=>goto(0)} style={ActiveQuestion[0]}>1</button>
+            {/* <button disabled={BtnDisabled[0]} onClick={()=>goto(0)} style={ActiveQuestion[0]}>1</button>
             <button disabled={BtnDisabled[1]} onClick={()=>goto(1)} style={ActiveQuestion[1]} > 2 </button>
             <button disabled={BtnDisabled[2]} onClick={()=>goto(2)} style={ActiveQuestion[2]} > 3 </button>
             <button disabled={BtnDisabled[3]} onClick={()=>goto(3)} style={ActiveQuestion[3]} > 4 </button>
@@ -150,7 +150,14 @@ export default function TestInterface() {
             <button disabled={BtnDisabled[16]} onClick={()=>goto(16)} style={ActiveQuestion[16]}> 17 </button>
             <button disabled={BtnDisabled[17]} onClick={()=>goto(17)} style={ActiveQuestion[17]}> 18 </button>
             <button disabled={BtnDisabled[18]} onClick={()=>goto(18)} style={ActiveQuestion[18]}> 19 </button>
-            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} style={ActiveQuestion[19]}> 20 </button>
+            <button disabled={BtnDisabled[19]} onClick={()=>goto(19)} style={ActiveQuestion[19]}> 20 </button> */}
+
+            {/* Dynamic Button Creation */}
+            
+            {QuestionsArr.map((ele,index)=>{
+              return(<button disabled={BtnDisabled[index]} onClick={()=>goto(index)} style={ActiveQuestion[index]}>{index+1}</button> 
+              )
+            })}
           </div>
           <button onClick={SubmitTest} id="leftsideSubmit"> Submit </button>
 
