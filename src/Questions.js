@@ -103,8 +103,7 @@ let QuestionsArr=[
     question:"Portugal Euro winning Year?",
     options:["2012","2020","2016","Never Won"],
     Answer:"2016"
-  },
-  
+  },  
 ]
 
 export default QuestionsArr;
