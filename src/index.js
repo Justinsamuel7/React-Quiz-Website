@@ -6,6 +6,7 @@ import { Routes, Route, Link} from 'react-router-dom';
 
 import App from './App';
 import TestInterface from './TestInterface';
+import LoadingBeforeStarting from './LoadingBeforeStarting'
 
 
 const rootElement = document.getElementById('root');
@@ -17,6 +18,7 @@ root.render(
   <Routes>
     <Route path="/" element={<App />}/>
     <Route path="/TestInterface" element={<TestInterface />}/>
+    <Route path="/LoadingBeforeStarting" element={<LoadingBeforeStarting />}/>
   </Routes>
   </BrowserRouter>
 );

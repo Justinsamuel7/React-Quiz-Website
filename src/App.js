@@ -18,15 +18,15 @@ export default function App() {
   function storename()
   {
     Name=name.UserName;
-    navigate('/TestInterface')
+    navigate('/LoadingBeforeStarting')
     console.log(name)
   }
 
   return (
     <div>
-      <h1>Welcome to Test</h1>
-      <p>Please enter your name</p>
-      <input type="text" placeholder="Name" name="UserName" value={name.UserName} id="nameinpbox" onChange={HandleInputs}/>
+      <h1>Welcome to Justest.IN</h1>
+      <p>Please enter your full name</p>
+      <input type="text" placeholder="Full Name" name="UserName" value={name.UserName} id="nameinpbox" onChange={HandleInputs}/>
       <button onClick={storename}>Enter</button>
       {/* {Timer? Result() : Questions()} */}
     </div>

@@ -26,6 +26,7 @@ export default function TestInterface() {
       document.exitFullscreen();
     }
   }, []);
+  
 
   let [Mark,setMark]=useState(0)
   let [qno,setqno]=useState(0) // To manage the question
