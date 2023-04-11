@@ -64,12 +64,17 @@ button,input,label
   display: flex;
   justify-content: space-around;
 }
-#ColorInstruction div
+#ColorInstruction div div
 {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 5px;
 }
+#ColorInstruction div span
+{
+  margin-left: -1rem;
+}
+
 #Answered
 {
   background-color: #00ff00;

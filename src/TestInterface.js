@@ -168,10 +168,21 @@ export default function TestInterface() {
           <button onClick={SubmitTest} id="leftsideSubmit"> Submit </button>
 
           <div id="ColorInstruction">
+            <div>
             <div id="Answered"></div>
+            <span>Answered</span>
+            </div>
+
+            <div>
             <div id="Visited"></div>
+            <span>Visited</span>
+            </div>
+
+            <div>
             <div id="NotVisited"></div>
-            
+            <span>NotVisited</span>
+            </div>
+
           </div>
 
 
