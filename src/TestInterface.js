@@ -26,7 +26,7 @@ export default function TestInterface() {
       document.exitFullscreen();
     }
   }, []);
-  
+
 
   let [Mark,setMark]=useState(0)
   let [qno,setqno]=useState(0) // To manage the question
@@ -110,6 +110,8 @@ export default function TestInterface() {
     // border: '1px solid rgb(79, 211, 167)'
   };
 
+  const Answered={backgroundColor: "#00ff00",color: "#fff"}
+
   let [ActiveQuestion,setActiveQuestion]=useState([YesActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]) //Active Question CSS
 
 
@@ -156,7 +158,10 @@ export default function TestInterface() {
             {/* Dynamic Button Creation */}
             
             {QuestionsArr.map((ele,index)=>{
-              return(<button disabled={BtnDisabled[index]} onClick={()=>goto(index)} style={ActiveQuestion[index]}>{index+1}</button> 
+              return(
+              <button disabled={BtnDisabled[index]} onClick={()=>goto(index)} 
+              style={SelectedAnswers[index] !== undefined ? Answered
+              : ActiveQuestion[index]}> {index+1} </button> 
               )
             })}
           </div>
