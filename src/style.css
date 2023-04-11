@@ -26,7 +26,7 @@ button,input,label
 {
   box-shadow: 0px 0px 10px rgb(56, 56, 56);
   border-radius: 0.5rem;
-  height: 30rem;
+  height: 32rem;
   margin-left: 2rem;
   margin-right: 0.5rem;
 }
@@ -34,14 +34,15 @@ button,input,label
 {
   box-shadow: 0px 0px 10px rgb(56, 56, 56);
   border-radius: 0.5rem;
-  height: 30rem;
+  height: 32rem;
   margin-right: 2rem;
 }
 #map
 {
   width: 25vw;
 }
-#buttonsContainer {
+#buttonsContainer
+{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 10px;
@@ -58,7 +59,36 @@ button,input,label
   font-weight: bolder;
   box-shadow: 0px 0px 3px rgb(5, 255, 205);
 }
-#buttonsContainer button:disabled {
+#ColorInstruction
+{
+  display: flex;
+  justify-content: space-around;
+}
+#ColorInstruction div
+{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+}
+#Answered
+{
+  background-color: #00ff00;
+  border: 2px solid rgb(52, 204, 153);
+}
+#NotVisited
+{
+  background-color:rgb(135, 171, 159);
+  border: 2px solid rgb(80, 129, 112);
+}
+#Visited
+{
+  background-color:rgb(129, 224, 192);
+  border: 2px solid rgb(52, 204, 153);
+}
+
+
+#buttonsContainer button:disabled 
+{
   background-color:rgb(135, 171, 159);
   border: 2px solid rgb(80, 129, 112);
   color: rgb(100, 100, 100);
