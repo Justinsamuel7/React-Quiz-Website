@@ -171,7 +171,7 @@ export default function TestInterface() {
             {QuestionsArr.map((ele,index)=>{
               return(
               <button disabled={BtnDisabled[index]} onClick={()=>goto(index)} 
-              style={SelectedAnswers[index] !== undefined ? (Answered)
+              style={SelectedAnswers[index] !== undefined ? (qno===index? AnsweredActie:Answered)
               : ActiveQuestion[index]}> {index+1} </button> 
               )
             })}
