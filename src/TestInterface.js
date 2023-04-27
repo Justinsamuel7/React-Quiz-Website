@@ -45,7 +45,7 @@ export default function TestInterface() {
 
   let TestDuration=20*60*1000 //20min x 60sec x 1000ms = 12,00,000 ms
 
-  setTimeout(()=>{
+  let testTime=setTimeout(()=>{
 
     let CalculateMarks=0;
     QuestionsArr.forEach((ele, index)=>{
@@ -56,8 +56,9 @@ export default function TestInterface() {
     })
     setMark(CalculateMarks);
     setTimerANDTestON(true);
+    clearTimeout(testTime);
 
-  },TestDuration)
+  },testTime)
 
 
 
