@@ -40,9 +40,10 @@ export default function TestInterface() {
 
   // let [Qmap,setQmap] = useState(true)
 
+
+
+
   let TestDuration=20*60*1000 //20min x 60sec x 1000ms = 12,00,000 ms
-
-
 
   setTimeout(()=>{
 
@@ -58,7 +59,7 @@ export default function TestInterface() {
 
   },TestDuration)
 
-  
+
 
   function HandleSelection(MyAnswer,Qno)
   {
