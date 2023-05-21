@@ -58,7 +58,7 @@ export default function TestInterface() {
     setTimerANDTestON(true);
     clearTimeout(testTime);
 
-  },testTime)
+  },TestDuration)
 
 
 
