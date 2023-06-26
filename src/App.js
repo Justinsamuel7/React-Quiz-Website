@@ -1,5 +1,5 @@
-import React,{useState} from "react";
-import "./style.css";
+import React,{useState, useEffect} from "react";
+import "./WelcomePage.css";
 import {Router,Route,Link,useNavigate} from 'react-router-dom'
 
 export let Name="";
@@ -9,10 +9,24 @@ export default function App() {
 
   let [name,Setname]=useState({UserName:""});
 
+  let [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+
+ function check(){
+
+    if (name.UserName.length == 1) {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+    }
+  }
+
+  let btnEnb = document.getElementById('btnEnb')
   function HandleInputs(e)
   {
     let key=e.target.name;
     Setname({...name,[key]:e.target.value})
+    check()
   }
 
   function storename()
@@ -23,11 +37,11 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div class="welcomepagecontentContainer">
       <h1>Welcome to Justest.IN</h1>
       <p>Please enter your full name</p>
       <input type="text" placeholder="Full Name" name="UserName" value={name.UserName} id="nameinpbox" onChange={HandleInputs}/>
-      <button onClick={storename}>Enter</button>
+      <button onClick={storename} disabled={isButtonDisabled} id="btnEnb">Enter</button>
       {/* {Timer? Result() : Questions()} */}
     </div>
   );
