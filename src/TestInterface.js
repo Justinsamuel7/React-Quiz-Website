@@ -32,7 +32,13 @@ export default function TestInterface() {
   let [qno,setqno]=useState(0) // To manage the question
   let [TimerANDTestON,setTimerANDTestON] = useState(false)  //to end the test after the time
 
-  let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]) //Button Map Disabled Values
+  //Button Map Disabled Values
+  // let [BtnDisabled,setBtnDisabled]=useState([false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]) 
+
+  // For dynamic button creation depends on No.of questions
+  let NoOfButtons = QuestionsArr.length
+  let [BtnDisabled,setBtnDisabled]=useState(Array(NoOfButtons).fill(false).map((ele, index) => index !== 0)) 
+
 
 
 
@@ -71,7 +77,10 @@ export default function TestInterface() {
 
   function nextquestion(qnoforbtn)
   { 
-    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+    // let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    // same thing like above in Dynamic way 
+    let TempActiveQuestion = Array(NoOfButtons).fill(NotActive)
 
     TempActiveQuestion[qnoforbtn+1]=YesActive;
     setActiveQuestion(TempActiveQuestion);
@@ -85,7 +94,10 @@ export default function TestInterface() {
 
   function prevquestion()
   {
-    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+    // let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    // same thing like above in Dynamic way 
+    let TempActiveQuestion = Array(NoOfButtons).fill(NotActive)
 
     TempActiveQuestion[qno-1]=YesActive;
     setActiveQuestion(TempActiveQuestion);
@@ -96,7 +108,10 @@ export default function TestInterface() {
   // travel through the active questions
   function goto(num)
   {  
-    let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+    // let TempActiveQuestion=[NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]
+
+    // same thing like above in Dynamic way 
+    let TempActiveQuestion = Array(NoOfButtons).fill(NotActive)
 
     TempActiveQuestion[num]=YesActive;
     setActiveQuestion(TempActiveQuestion);
@@ -128,8 +143,11 @@ export default function TestInterface() {
   }
 
 
-  let [ActiveQuestion,setActiveQuestion]=useState([YesActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]) //Active Question CSS
+  // let [ActiveQuestion,setActiveQuestion]=useState([YesActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive,NotActive]) //Active Question CSS
 
+  // Dynamic way
+  let ActiveQuestionArr = Array(NoOfButtons).fill(NotActive).map((ele,index)=> {if(index===0){return YesActive}})
+  let [ActiveQuestion,setActiveQuestion]=useState(ActiveQuestionArr)
 
   // to Display the question
 
