@@ -14,7 +14,7 @@ const LoadingBeforeStarting = () => {
       setCountdown(prevCountdown => prevCountdown - 1);
     }, 1000);
 
-    if (countdown === -1) {
+    if (countdown === 0) {
       clearInterval(timer);
       navigate("/TestInterface");
     }
