@@ -14,14 +14,17 @@ export default function App() {
 
  function check(){
 
-    if (name.UserName.length == 1) {
+  console.log(name.UserName)
+  console.log(name.UserName.length)
+
+    if (name.UserName.length < 1) {
       setIsButtonDisabled(true);
     } else {
       setIsButtonDisabled(false);
     }
   }
 
-  let btnEnb = document.getElementById('btnEnb')
+  // let btnEnb = document.getElementById('btnEnb')
   function HandleInputs(e)
   {
     let key=e.target.name;
