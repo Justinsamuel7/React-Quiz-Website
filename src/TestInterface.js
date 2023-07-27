@@ -4,7 +4,7 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
 import {Name} from './App'
 import CountdownTimer from './CountDown'
-
+import {Title} from './App'
 
 
 export default function TestInterface() {
@@ -284,7 +284,7 @@ export default function TestInterface() {
   {
     return(
       <>
-     <h1>Mr/Ms. {Name},  Your Result is Ready...</h1>
+     <h1>{Title}. {Name},  Your Result is Ready...</h1>
      <h3>You Attempted {SelectedAnswers.length} out of {QuestionsArr.length} Questions</h3>
      <h3>Your Marks : {Mark}/{QuestionsArr.length}</h3>
      <h3>Percentage : {(Mark/QuestionsArr.length)*100}%</h3>

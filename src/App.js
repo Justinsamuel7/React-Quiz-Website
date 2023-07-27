@@ -3,6 +3,7 @@ import "./WelcomePage.css";
 import {Router,Route,Link,useNavigate} from 'react-router-dom'
 
 export let Name="";
+export let Title="";
 
 export default function App() {
   let navigate=useNavigate();
@@ -34,6 +35,7 @@ export default function App() {
 
   function storename()
   {
+    Title=document.getElementById('titleSelect').value
     Name=name.UserName;
     navigate('/LoadingBeforeStarting')
     console.log(name)
@@ -41,10 +43,17 @@ export default function App() {
 
   return (
     <div class="welcomepagecontentContainer">
-      <h1>Welcome to Justest.IN</h1>
-      <p>Please enter your full name</p>
-      <input type="text" placeholder="Full Name" name="UserName" value={name.UserName} id="nameinpbox" onChange={HandleInputs}/>
-      <button onClick={storename} disabled={isButtonDisabled} id="btnEnb">Enter</button>
+      <h1 className="pagetitlecolor">Welcome to <span className="pagetitlecolorspan">Just</span>est.<span className="pagetitlecolorspan">IN</span></h1>
+      <p>Please enter your full name to continue</p>
+      <div>
+        <select name="Title" id="titleSelect">
+          <option value="Mr">Mr.</option>
+          <option value="Ms">Ms.</option>
+          <option value="Dr">Dr.</option>
+        </select>
+        <input type="text" placeholder="Full Name" name="UserName" value={name.UserName} id="nameinpbox" onChange={HandleInputs}/>
+        <button onClick={storename} disabled={isButtonDisabled} id="btnEnb">Enter</button>
+      </div>
       {/* {Timer? Result() : Questions()} */}
     </div>
   );
