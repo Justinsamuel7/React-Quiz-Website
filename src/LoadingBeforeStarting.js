@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Router,Route,Link,useNavigate} from 'react-router-dom'
+import "./WaitingBeforeTest.css";
 
 
 
@@ -25,8 +26,8 @@ const LoadingBeforeStarting = () => {
   }, [countdown, navigate]);
 
   return (
-    <div>
-      <h2>Your Test Begins in {countdown} seconds</h2>
+    <div id="container">
+      <h1 id="beginsintimetest">Your Test Begins in <span>{countdown}</span> Seconds...</h1>
     </div>
   );
 };

@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 
 .Pagecolor
 {
-  color: rgb(63, 217, 217);
-  text-shadow: 0px 0px 2px black;
+  color: rgb(0, 30, 54);
+  text-shadow: 0px 0px 2px rgb(0, 148, 130);
 }
 .Pagecolor1
 {
-  color: rgb(0, 49, 118);
-  text-shadow: 0px 0px 2px rgb(63, 217, 217);
+  color: rgb(0, 92, 81);
+  text-shadow: 0px 0px 2px rgb(0, 222, 222);
 }
 
 
@@ -153,6 +155,7 @@ button,input,label
   justify-content:space-between;
   margin-left: 2rem;
   margin-right: 2rem;
+  
 }
 /* .YesActive
 {

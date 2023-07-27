@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <div class="welcomepagecontentContainer">
-      <h1 className="pagetitlecolor">Welcome to <span className="pagetitlecolorspan">Just</span>est.<span className="pagetitlecolorspan">IN</span></h1>
+      <h1 className="pagetitlecolor animate__animated animate__bounceInDown">Welcome to <span className="pagetitlecolorspan">Just</span>est.<span className="pagetitlecolorspan">IN</span></h1>
       <p>Please enter your full name to continue</p>
       <div>
         <select name="Title" id="titleSelect">

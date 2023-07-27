@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
-import "./style.css";
+import "./TestInterface.css"
+import "./Resultpage.css";
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import QuestionsArr from './Questions'
 import {Name} from './App'
@@ -9,23 +10,23 @@ import {Title} from './App'
 
 export default function TestInterface() {
 
-  useEffect(() => {
-    const element = document.getElementById("TestScreen");
-    element.requestFullscreen();
+  // useEffect(() => {
+  //   const element = document.getElementById("TestScreen");
+  //   element.requestFullscreen();
 
-    document.addEventListener("fullscreenchange", () => {
-      if (document.fullscreenElement === element) {
-        console.log("Entered full-screen mode.");
-      } else {
-        console.log("Exited full-screen mode.");
-      }
-    });
+  //   document.addEventListener("fullscreenchange", () => {
+  //     if (document.fullscreenElement === element) {
+  //       console.log("Entered full-screen mode.");
+  //     } else {
+  //       console.log("Exited full-screen mode.");
+  //     }
+  //   });
 
-    return () => {
-      document.removeEventListener("fullscreenchange", () => {});
-      document.exitFullscreen();
-    }
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("fullscreenchange", () => {});
+  //     document.exitFullscreen();
+  //   }
+  // }, []);
 
 
   let [Mark,setMark]=useState(0)
@@ -135,7 +136,7 @@ export default function TestInterface() {
     backgroundColor: "#00ff00",
     color: "#fff"
   }
-  const AnsweredActie=
+  const AnsweredActive=
   {
     backgroundColor: "#00ff00",
     color: "#fff",
@@ -160,7 +161,7 @@ export default function TestInterface() {
     <div id="TestScreen" style={{ backgroundColor: "#fff" }}>
     <div id="Interface_Top"> 
       <div><h2 className="Pagecolor1"><span className="Pagecolor">Just</span>est.<span className="Pagecolor">IN</span></h2></div>
-      <div><h4>Name : {Name}</h4><h3>Time Remaining: <CountdownTimer/></h3></div>
+      <div id="timeandname"><h3>Name : {Name}</h3><h3>Time Remaining: <CountdownTimer/></h3></div>
     </div>
 
       <div id="Qpartandmap" >
@@ -194,7 +195,7 @@ export default function TestInterface() {
             {QuestionsArr.map((ele,index)=>{
               return(
               <button disabled={BtnDisabled[index]} onClick={()=>goto(index)} 
-              style={SelectedAnswers[index] !== undefined ? (qno===index? AnsweredActie:Answered)
+              style={SelectedAnswers[index] !== undefined ? (qno===index? AnsweredActive:Answered)
               : ActiveQuestion[index]}> {index+1} </button> 
               )
             })}
@@ -283,13 +284,13 @@ export default function TestInterface() {
   function Result()
   {
     return(
-      <>
-     <h1>{Title}. {Name},  Your Result is Ready...</h1>
+      <div id="resultpage">
+     <h1>{Title}. {Name}  Your Result is Ready !</h1>
      <h3>You Attempted {SelectedAnswers.length} out of {QuestionsArr.length} Questions</h3>
      <h3>Your Marks : {Mark}/{QuestionsArr.length}</h3>
      <h3>Percentage : {(Mark/QuestionsArr.length)*100}%</h3>
-     <h4>Thank You!</h4>
-      </>
+     <h4>Thank You !</h4>
+      </div>
     )
   }
 
