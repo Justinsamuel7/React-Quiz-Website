@@ -1,123 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+* {
   font-family: 'Poppins', sans-serif;
 }
 
-
-.Pagecolor
-{
+.Pagecolor {
   color: rgb(0, 30, 54);
   text-shadow: 0px 0px 2px rgb(0, 148, 130);
 }
-.Pagecolor1
-{
+.Pagecolor1 {
   color: rgb(0, 92, 81);
   text-shadow: 0px 0px 2px rgb(0, 222, 222);
 }
 
-
-button,input,label
-{
+button,
+input,
+label {
   cursor: pointer;
 }
-#Qpartandmap
-{
+#Qpartandmap {
   display: flex;
 }
-#Qpartandmap #map
-{
+#Qpartandmap #map {
   box-shadow: 0px 0px 10px rgb(56, 56, 56);
   border-radius: 0.5rem;
   height: 32rem;
   margin-left: 2rem;
   margin-right: 0.5rem;
 }
-#Qpartandmap #Qpart
-{
+#Qpartandmap #Qpart {
   box-shadow: 0px 0px 10px rgb(56, 56, 56);
   border-radius: 0.5rem;
   height: 32rem;
   margin-right: 2rem;
 }
-#map
-{
+#map {
   width: 25vw;
 }
-#buttonsContainer
-{
+#buttonsContainer {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 10px;
 }
 #buttonsContainer button {
-  margin:1rem;
+  margin: 1rem;
   text-align: center;
   width: 2rem;
   height: 2rem;
-  background-color:rgb(129, 224, 192);
+  background-color: rgb(129, 224, 192);
   border: 2px solid rgb(52, 204, 153);
   border-radius: 5px;
-  font-size:medium;
+  font-size: medium;
   font-weight: bolder;
   box-shadow: 0px 0px 3px rgb(5, 255, 205);
 }
-#ColorInstruction
-{
+#ColorInstruction {
   display: flex;
   justify-content: space-around;
 }
-#ColorInstruction div div
-{
+#ColorInstruction div div {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 5px;
 }
-#ColorInstruction div span
-{
+#ColorInstruction div span {
   margin-left: -1rem;
 }
 
-#Answered
-{
+#Answered {
   background-color: #00ff00;
   border: 2px solid rgb(52, 204, 153);
 }
-#NotVisited
-{
-  background-color:rgb(135, 171, 159);
+#NotVisited {
+  background-color: rgb(135, 171, 159);
   border: 2px solid rgb(80, 129, 112);
 }
-#Visited
-{
-  background-color:rgb(129, 224, 192);
+#Visited {
+  background-color: rgb(129, 224, 192);
   border: 2px solid rgb(52, 204, 153);
 }
 
-
-#buttonsContainer button:disabled 
-{
-  background-color:rgb(135, 171, 159);
+#buttonsContainer button:disabled {
+  background-color: rgb(135, 171, 159);
   border: 2px solid rgb(80, 129, 112);
   color: rgb(100, 100, 100);
-  font-weight:lighter;
-  box-shadow:none;
+  font-weight: lighter;
+  box-shadow: none;
   cursor: not-allowed;
 }
-#Qpart
-{
+#Qpart {
   width: 75vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Qpart p
-{
+#Qpart p {
   margin: 1rem;
   width: 60vw;
   font-size: xx-large;
 }
-#Qpart button, #leftsideSubmit
-{
+#Qpart button,
+#leftsideSubmit {
   margin: 2rem;
   background-color: rgb(46, 168, 255);
   border: 1px solid rgb(84, 84, 255);
@@ -125,37 +107,30 @@ button,input,label
   width: 5rem;
   height: 2rem;
 }
-#discur
-{
+#discur {
   cursor: not-allowed;
 }
-#PreNextbuttonscontainer
-{
+#PreNextbuttonscontainer {
   width: 50vw;
   display: flex;
   justify-content: space-between;
 }
-.optionscontainer input
-{
+.optionscontainer input {
   margin: 1rem;
   font-size: x-large;
-
 }
-.true{
+.true {
   color: red;
 }
-#buttonscontainer
-{
+#buttonscontainer {
   display: flex;
   justify-content: space-around;
 }
-#Interface_Top
-{
+#Interface_Top {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-left: 2rem;
   margin-right: 2rem;
-  
 }
 /* .YesActive
 {
@@ -175,13 +150,12 @@ label span {
   border-radius: 0.5rem;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
-
 label span:before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
@@ -191,19 +165,16 @@ label span:before {
   vertical-align: middle;
 }
 
-label input[type="radio"]:checked + span:before {
-  
+label input[type='radio']:checked + span:before {
   background-color: rgb(97, 210, 255);
-  border-color:rgb(39, 194, 255);
-  content: "✔";
+  border-color: rgb(39, 194, 255);
+  content: '✔';
   color: #fff;
   text-align: center;
   line-height: 16px;
 }
 
-label input[type="radio"]:checked +span {
-
+label input[type='radio']:checked + span {
   background-color: rgb(97, 210, 255);
   border-color: rgb(0, 43, 163);
 }
-
